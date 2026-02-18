@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+.markmap-dark {
+  background: #27272a;
+  color: white;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/index.js"></script><script>((r) => {
+          setTimeout(r);
+        })(() => {
+  const { markmap, mm } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute("style", "position:absolute;bottom:20px;right:20px");
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+              if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                document.documentElement.classList.add("markmap-dark");
+              }
+            })(() => window.markmap,null,{"content":"<strong>Observat&#xf3;rio da Mulher &#x2013; Estado de S&#xe3;o Paulo</strong>","children":[{"content":"<strong>Orf&#xe3;os Do Feminic&#xed;dio</strong> <img src=\"https://cdn-icons-png.flaticon.com/512/3048/3048122.png\" width=\"24\">","children":[{"content":"Perfil Et&#xe1;rio <img src=\"https://cdn-icons-png.flaticon.com/512/3048/3048124.png\" width=\"20\">","children":[{"content":"Distribui&#xe7;&#xe3;o por faixa et&#xe1;ria (primeira inf&#xe2;ncia, inf&#xe2;ncia, adolesc&#xea;ncia)","children":[],"payload":{"tag":"li","lines":"6,7"}},{"content":"N&#xfa;mero m&#xe9;dio de &#xf3;rf&#xe3;os por caso","children":[],"payload":{"tag":"li","lines":"7,10"}}],"payload":{"tag":"h3","lines":"5,6"}},{"content":"Situa&#xe7;&#xe3;o de Guarda <img src=\"https://cdn-icons-png.flaticon.com/512/1077/1077114.png\" width=\"20\">","children":[{"content":"Tipos de guarda (av&#xf3;s, tios, fam&#xed;lia extensa, institucionaliza&#xe7;&#xe3;o)","children":[],"payload":{"tag":"li","lines":"11,12"}},{"content":"Tempo m&#xe9;dio at&#xe9; a defini&#xe7;&#xe3;o da guarda","children":[],"payload":{"tag":"li","lines":"12,13"}},{"content":"Estabilidade ou troca de respons&#xe1;veis ao longo do tempo","children":[],"payload":{"tag":"li","lines":"13,16"}}],"payload":{"tag":"h3","lines":"10,11"}},{"content":"Renda Familiar <img src=\"https://cdn-icons-png.flaticon.com/512/3135/3135706.png\" width=\"20\">","children":[{"content":"Renda familiar antes e depois do feminic&#xed;dio","children":[],"payload":{"tag":"li","lines":"17,18"}},{"content":"Acesso a benef&#xed;cios sociais","children":[],"payload":{"tag":"li","lines":"18,19"}},{"content":"Situa&#xe7;&#xe3;o de trabalho dos respons&#xe1;veis legais","children":[],"payload":{"tag":"li","lines":"19,22"}}],"payload":{"tag":"h3","lines":"16,17"}},{"content":"Acesso a Pol&#xed;ticas P&#xfa;blicas <img src=\"https://cdn-icons-png.flaticon.com/512/854/854878.png\" width=\"20\">","children":[{"content":"Acesso a assist&#xea;ncia social, sa&#xfa;de e educa&#xe7;&#xe3;o","children":[],"payload":{"tag":"li","lines":"23,24"}},{"content":"Continuidade do acompanhamento institucional","children":[],"payload":{"tag":"li","lines":"24,25"}},{"content":"Articula&#xe7;&#xe3;o entre &#xf3;rg&#xe3;os (sa&#xfa;de, educa&#xe7;&#xe3;o, assist&#xea;ncia, justi&#xe7;a)","children":[],"payload":{"tag":"li","lines":"25,28"}}],"payload":{"tag":"h3","lines":"22,23"}},{"content":"Sa&#xfa;de Mental <img src=\"https://cdn-icons-png.flaticon.com/512/833/833472.png\" width=\"20\">","children":[{"content":"Encaminhamentos para atendimento psicol&#xf3;gico","children":[],"payload":{"tag":"li","lines":"29,30"}},{"content":"Continuidade do cuidado","children":[],"payload":{"tag":"li","lines":"30,31"}},{"content":"Subsidiar pol&#xed;ticas de cuidado psicossocial","children":[],"payload":{"tag":"li","lines":"31,34"}}],"payload":{"tag":"h3","lines":"28,29"}},{"content":"Educa&#xe7;&#xe3;o e Evas&#xe3;o Escolar <img src=\"https://cdn-icons-png.flaticon.com/512/2232/2232688.png\" width=\"20\">","children":[{"content":"Frequ&#xea;ncia e perman&#xea;ncia escolar","children":[],"payload":{"tag":"li","lines":"35,36"}},{"content":"Mudan&#xe7;as de escola ap&#xf3;s o feminic&#xed;dio","children":[],"payload":{"tag":"li","lines":"36,37"}},{"content":"Situa&#xe7;&#xf5;es de atraso ou evas&#xe3;o","children":[],"payload":{"tag":"li","lines":"37,40"}}],"payload":{"tag":"h3","lines":"34,35"}},{"content":"Linha do Tempo <img src=\"https://cdn-icons-png.flaticon.com/512/2088/2088617.png\" width=\"20\">","children":[{"content":"Situa&#xe7;&#xe3;o no momento zero","children":[],"payload":{"tag":"li","lines":"41,42"}},{"content":"Primeiros seis meses","children":[],"payload":{"tag":"li","lines":"42,43"}},{"content":"Um ano ap&#xf3;s","children":[],"payload":{"tag":"li","lines":"43,44"}},{"content":"Dois anos ap&#xf3;s","children":[],"payload":{"tag":"li","lines":"44,45"}},{"content":"Indicadores Longitudinais","children":[],"payload":{"tag":"li","lines":"45,46"}},{"content":"Situa&#xe7;&#xe3;o Atual","children":[],"payload":{"tag":"li","lines":"46,48"}}],"payload":{"tag":"h3","lines":"40,41"}},{"content":"Equipamentos <img src=\"https://cdn-icons-png.flaticon.com/512/2232/2232688.png\" width=\"20\">","children":[{"content":"Quais dados s&#xe3;o coletados?","children":[],"payload":{"tag":"li","lines":"49,50"}},{"content":"Quais ferramentas s&#xe3;o utilizadas?","children":[],"payload":{"tag":"li","lines":"50,51"}},{"content":"Quais equipamentos realizam o acompanhamento","children":[],"payload":{"tag":"li","lines":"51,53"}}],"payload":{"tag":"h3","lines":"48,49"}}],"payload":{"tag":"h2","lines":"3,4"}}],"payload":{"tag":"h1","lines":"1,2"}},null)</script>
+</body>
+</html>
