@@ -5,234 +5,123 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Observatório da Mulher – Mapas</title>
+
     <style>
         :root {
-            --bg: #0b1220;
-            --card: #101a2e;
-            --card2: #0f1a33;
-            --text: #e7eaf0;
-            --muted: #a8b0c0;
-            --line: rgba(255, 255, 255, .10);
-            --btn: #1f6feb;
-            --btn2: #2ea043;
-        }
-
-        * {
-            box-sizing: border-box
+            --bg: #0f172a;
+            --card: #1e293b;
+            --text: #f1f5f9;
+            --muted: #94a3b8;
+            --btn: #2563eb;
+            --btn2: #16a34a;
         }
 
         body {
             margin: 0;
-            font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-            background: radial-gradient(1200px 600px at 20% 0%, #16244a 0%, var(--bg) 55%) fixed;
+            font-family: system-ui, -apple-system, sans-serif;
+            background: var(--bg);
             color: var(--text);
         }
 
-        .wrap {
+        .container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 28px 18px 60px;
-        }
-
-        header {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            padding: 18px 18px 0;
-        }
-
-        .kicker {
-            color: var(--muted);
-            font-size: 14px;
-            letter-spacing: .2px
+            padding: 40px 20px;
         }
 
         h1 {
-            margin: 0;
-            font-size: 28px;
-            line-height: 1.2
+            margin-bottom: 10px;
         }
 
-        .sub {
-            margin: 0;
+        p {
             color: var(--muted);
-            max-width: 80ch;
-            line-height: 1.5
+            margin-bottom: 30px;
         }
 
-        .grid {
+        .cards {
             display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 16px;
-            margin-top: 22px;
-            padding: 0 18px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
         }
 
         .card {
-            grid-column: span 6;
-            background: linear-gradient(180deg, rgba(255, 255, 255, .04), rgba(255, 255, 255, .02));
-            border: 1px solid var(--line);
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
-            display: flex;
-            flex-direction: column;
-            min-height: 220px;
-        }
-
-        .card .top {
-            padding: 18px 18px 14px;
-            display: flex;
-            gap: 12px;
-            align-items: flex-start;
-        }
-
-        .icon {
-            width: 42px;
-            height: 42px;
+            background: var(--card);
+            padding: 25px;
             border-radius: 12px;
-            background: rgba(255, 255, 255, .06);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid var(--line);
-            flex: 0 0 auto;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
         }
 
-        .title {
-            margin: 0;
-            font-size: 18px
+        .card h2 {
+            margin-top: 0;
         }
 
-        .desc {
-            margin: 6px 0 0;
-            color: var(--muted);
-            line-height: 1.45
+        .card p {
+            margin-bottom: 20px;
         }
 
-        .actions {
-            margin-top: auto;
-            padding: 14px 18px 18px;
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        a.btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 10px 12px;
-            border-radius: 12px;
+        .btn {
+            display: inline-block;
+            padding: 10px 16px;
+            border-radius: 8px;
             text-decoration: none;
             color: white;
-            border: 1px solid var(--line);
-            background: rgba(255, 255, 255, .06);
-        }
-
-        a.btn.primary {
-            background: var(--btn);
-            border-color: rgba(255, 255, 255, .15)
-        }
-
-        a.btn.green {
-            background: var(--btn2);
-            border-color: rgba(255, 255, 255, .15)
-        }
-
-        a.btn:hover {
-            filter: brightness(1.05)
-        }
-
-        .note {
-            margin: 18px 18px 0;
-            padding: 14px 16px;
-            border: 1px dashed var(--line);
-            border-radius: 14px;
-            color: var(--muted);
-            background: rgba(255, 255, 255, .03);
-            line-height: 1.5;
+            margin-right: 10px;
             font-size: 14px;
         }
 
-        footer {
-            margin-top: 28px;
-            padding: 0 18px;
-            color: var(--muted);
-            font-size: 13px;
+        .primary {
+            background: var(--btn);
         }
 
-        @media (max-width: 900px) {
-            .card {
-                grid-column: span 12;
-            }
+        .secondary {
+            background: var(--btn2);
+        }
 
-            h1 {
-                font-size: 24px
-            }
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: var(--muted);
         }
     </style>
 </head>
 
 <body>
-    <div class="wrap">
-        <header>
-            <div class="kicker">Convênio UNESP + Secretaria Pública da Mulher – Estado de São Paulo</div>
-            <h1>Observatório da Mulher – Mapas</h1>
-            <p class="sub">
-                Portal de acesso aos mapas mentais (Markmap) do projeto. Use os links abaixo para abrir cada eixo em
-                tela cheia.
-            </p>
-        </header>
 
-        <section class="grid">
-            <!-- CARD 1 -->
-            <article class="card">
-                <div class="top">
-                    <div class="icon" aria-hidden="true">🗺️</div>
-                    <div>
-                        <h2 class="title">Mapa Geral do Observatório</h2>
-                        <p class="desc">
-                            Visão macro: governança, eixos temáticos, inteligência de dados, visualização e capacitação.
-                        </p>
-                    </div>
-                </div>
-                <div class="actions">
-                    <a class="btn primary" href="mapa-geral.html">Abrir mapa</a>
-                    <a class="btn" href="mapa-geral.html" target="_blank" rel="noopener">Abrir em nova aba</a>
-                </div>
-            </article>
+    <div class="container">
+        <h1>Observatório da Mulher – Estado de São Paulo</h1>
+        <p>Portal de acesso aos mapas estruturais do projeto desenvolvido em parceria entre a UNESP e a Secretaria
+            Pública da Mulher.</p>
 
-            <!-- CARD 2 -->
-            <article class="card">
-                <div class="top">
-                    <div class="icon" aria-hidden="true">🤝</div>
-                    <div>
-                        <h2 class="title">Eixo: Órfãos do Feminicídio</h2>
-                        <p class="desc">
-                            Estrutura de indicadores e acompanhamento (guarda, renda, saúde mental, educação, rede de
-                            atendimento).
-                        </p>
-                    </div>
-                </div>
-                <div class="actions">
-                    <a class="btn green" href="mapa-orfaos.html">Abrir mapa</a>
-                    <a class="btn" href="mapa-orfaos.html" target="_blank" rel="noopener">Abrir em nova aba</a>
-                </div>
-            </article>
-        </section>
+        <div class="cards">
 
-        <div class="note">
-            <strong>Dica:</strong> você pode adicionar mais mapas criando novos arquivos HTML (ex.:
-            <code>mapa-feminicidio.html</code>)
-            e duplicando um cartão acima, mudando apenas título e link.
+            <div class="card">
+                <h2>📊 Mapa Geral do Observatório</h2>
+                <p>Estrutura completa do projeto, incluindo governança, eixos temáticos, inteligência de dados e
+                    visualização estratégica.</p>
+                <a class="btn primary" href="mapa_geral.html">Abrir Mapa</a>
+                <a class="btn" href="mapa_geral.html" target="_blank">Abrir em nova aba</a>
+            </div>
+
+            <div class="card">
+                <h2>🤝 Eixo: Órfãos do Feminicídio</h2>
+                <p>Indicadores estruturados para acompanhamento longitudinal de guarda, renda, saúde mental, educação e
+                    rede de proteção.</p>
+                <a class="btn secondary" href="mapa_orfaos.html">Abrir Mapa</a>
+                <a class="btn" href="mapa_orfaos.html" target="_blank">Abrir em nova aba</a>
+            </div>
+
         </div>
 
         <footer>
-            © Observatório da Mulher – SP • Versão publicada via GitHub Pages
+            © Observatório da Mulher – SP | Publicado via GitHub Pages
         </footer>
+
     </div>
+
 </body>
 
 </html>
